@@ -5,4 +5,4 @@ use=web, web=checkip.dyndns.com, web-skip='IP Address'
 server=members.dyndns.org
 login=<%= @node[:ddclient][:dyndns_login] %>
 password=<%= @node[:ddclient][:dyndns_password] %>
-<%= "#{@node[:public_fqdn]|| @node[:fqdn]}" %>
+<%= @node[:ddclient][:machine] %>
