@@ -1,7 +1,8 @@
+# /etc/ddclient.conf
 pid=/var/run/ddclient.pid
 protocol=dyndns2
-server=update.dynect.net
-use=web
+use=web, web=checkip.dyndns.com, web-skip='IP Address'
+server=members.dyndns.org
 login=<%= @node[:ddclient][:dyndns_login] %>
 password=<%= @node[:ddclient][:dyndns_password] %>
 <%= "#{@node[:public_fqdn]|| @node[:fqdn]}" %>
